@@ -1,0 +1,9 @@
+
+<div>
+<% @team_array.each do |member| %>
+  
+  <h3><%=member[:team_mate]%></h3>
+  <img src="<%=member[:avatar]%>" />
+  
+<% end %>
+</div>

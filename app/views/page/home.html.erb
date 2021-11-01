@@ -1,0 +1,9 @@
+<div id="gossips">
+<% @gossips.each do |gossip| %>
+  <h3 class="big_title" ><%= gossip.title %></h3>
+  <p><%= gossip.content %></p>
+  <p><%=gossip.created_at %></p>
+<% end %> 
+</div>
+
+

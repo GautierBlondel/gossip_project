@@ -3,6 +3,7 @@
   <h3 class="big_title" ><%= gossip.title %></h3>
   <p><%= gossip.content %></p>
   <p><%=gossip.created_at %></p>
+  <%= link_to "Voir le gossip", "/gossip/#{gossip.id}" %></div>
 <% end %> 
 </div>
 

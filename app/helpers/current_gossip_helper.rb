@@ -1,0 +1,2 @@
+module CurrentGossipHelper
+end

@@ -1,0 +1,9 @@
+<h1>Cities</h1>
+
+  <% @cities.each do |city| %>
+    <div class="gossips">
+      <div class="display_title">
+        <h3 class="big_title"><a href="<%= city_path(city.id) %>"><%= city.name %></a></h3>
+      </div>
+    </div>
+  <% end %>

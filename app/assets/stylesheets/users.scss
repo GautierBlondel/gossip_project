@@ -1,0 +1,12 @@
+.user_card {
+  border: solid 2px black;
+  width: 30%;
+  display: block;
+  margin: 20px auto;
+}
+
+.user_informations {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

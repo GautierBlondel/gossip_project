@@ -1,0 +1,11 @@
+<div class="city_gossip_all_cards">
+  <h1 class="city_title"><%=@current_city.name%></h1>
+  <div class="city_gossip_card">
+    <% @city_associated_gossips.each do |gossip| %>
+      <div >
+        <h3><%= gossip.title%></h3>
+        <p><%= gossip.content%></p>
+      </div>
+    <% end %>
+  </div>
+</div>

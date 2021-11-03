@@ -13,7 +13,8 @@
           </div>
           <div class="content_section">
             <p class="gossip_content"><%= gossip.content %></p>
-            <p class="date_creation"><%=gossip.created_at %></p>
+            <p class="gossip_author" href="">Written by: <%= @current_user.where(id: gossip.user_id).first.username %></p>
+            <a class="date_creation"><%=gossip.created_at %></a>
           </div>
             
           <div class="gossip_link">

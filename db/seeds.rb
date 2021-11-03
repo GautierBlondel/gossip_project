@@ -26,11 +26,11 @@ end
 end
 
 10.times do
-  User.create(name: Faker::Name.first_name, city: City.all.sample(1)[0])
+  User.create(username: Faker::Name.unique.first_name, first_name: Faker::Name.unique.first_name, last_name: Faker::Name.unique.last_name, description: Faker::Hipster.unique.sentence, email: Faker::Internet.unique.email, age: rand(18..79) ,city: City.all.sample(1)[0])
 end
 
 20.times do
-  Gossip.create(title: Faker::Lorem.sentence, content: Faker::Lorem.paragraph(sentence_count: 2), user: User.all.sample(1).first)
+  Gossip.create(title: Faker::Lorem.sentence[3..14], content: Faker::Lorem.paragraph(sentence_count: 2), user: User.all.sample(1).first)
 end
 
 Gossip.all.each do |current|

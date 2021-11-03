@@ -5,8 +5,12 @@ class GossipsController < ApplicationController
   end
 
   def create
-    Gossip.create(title: params[:gossip_title], content: params[:gossip_content], user_id: rand(1..10))
-    redirect_to("/")
-    # puts params 
+    @new_gossip =  Gossip.new(title: params[:gossip_title], content: params[:gossip_content], user_id: rand(1..10))
+    if @new_gossip.save # essaie de sauvegarder en base @gossip
+      redirect_to("/")
+    else
+      puts "OULALA ça marche pas"
+    end
   end 
+
 end

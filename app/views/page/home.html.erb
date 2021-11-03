@@ -1,10 +1,28 @@
-<div id="gossips">
-<% @gossips.each do |gossip| %>
-  <h3 class="big_title" ><%= gossip.title %></h3>
-  <p><%= gossip.content %></p>
-  <p><%=gossip.created_at %></p>
-  <%= link_to "Voir le gossip", "/gossip/#{gossip.id}" %></div>
-<% end %> 
+<div class="gossips_page">
+  <div class="sidebar">
+    <div class="sidebar_links">
+      <a href="<%=new_gossip_path %>">Créér un nouveau gossip</a>
+    </div>
+  </div>
+
+  <div class="gossips_display">
+      <% @gossips.each do |gossip| %>
+        <div class="gossips">
+          <div class="display_title">
+            <h3 class="big_title"><%= gossip.title %></h3>
+          </div>
+          <div class="content_section">
+            <p class="gossip_content"><%= gossip.content %></p>
+            <p class="date_creation"><%=gossip.created_at %></p>
+          </div>
+            
+          <div class="gossip_link">
+            <a href="<%= gossip_path(gossip.id) %>">Voir le gossip</a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 

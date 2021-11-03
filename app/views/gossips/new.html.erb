@@ -1,0 +1,14 @@
+
+<div class="new_gossip_form_wrapper">
+  <form action= <%= gossips_path %> method="POST">
+    <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+    
+    <label for="gossip_title">Titre du potin</label>
+    <input class="input_form" type="text" name="gossip_title">
+    
+    <label for="gossip_content">Balance le doss</label>
+    <input class="input_form" type="text" name="gossip_content">
+    
+    <input type="submit" value="Valider">
+  </form>
+</div>

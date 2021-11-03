@@ -1,4 +1,69 @@
-#gossips{
+.gossips_page {
+  display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: red;
+    border: solid 10px black;
+}
+
+.sidebar_links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.gossips_display {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.gossips {
   border: solid 1px black;
-  background-color: red;
+  width: 25%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.display_title {
+  margin-bottom: auto;
+}
+
+.big_title {
+  text-align: center;
+  width: 90%;
+  font-size: 22px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.content_section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px 60px 10px;
+  width: 90%;
+}
+
+.gossip_content {
+  // margin-bottom: 25px;
+}
+
+.date_creation {
+  font-style: italic;
+  position: relative;
+  top: 52px;
+  font-size: 15px;
+}
+
+.gossip_link {
+  text-align: center;
+  margin-bottom: 10px;
 }
